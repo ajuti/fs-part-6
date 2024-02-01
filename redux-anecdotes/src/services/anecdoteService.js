@@ -10,7 +10,7 @@ const getAll = async() => {
   return res.data
 }
 
-const newAnecdote = async({ content }) => {
+const newAnecdote = async(content) => {
   const res = await axios.post(baseUrl, { content, id: getId(), votes: 0 })
   console.log(res.data)
   return res.data
