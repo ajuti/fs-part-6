@@ -9,7 +9,7 @@ const AnecdoteList = (props) => {
   console.log(filter)
 
   const vote = (id) => {
-    dispatch(voteAnecdote(id))
+    dispatch(voteAnecdote({ id }))
   }
 
   return (
