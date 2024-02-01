@@ -16,4 +16,10 @@ const newAnecdote = async(content) => {
   return res.data
 }
 
-export default { getAll, newAnecdote }
+const vote = async(anecdote) => {
+  const res = await axios.patch(`${baseUrl}/${anecdote.id}`, { votes: anecdote.votes + 1 })
+  console.log(res.data)
+  return res.data
+}
+
+export default { getAll, newAnecdote, vote }
